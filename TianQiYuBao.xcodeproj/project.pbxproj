@@ -14,7 +14,8 @@
 		74EB033D1C11F4B200C12847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EB033B1C11F4B200C12847 /* LaunchScreen.storyboard */; };
 		74EB03481C11F4B200C12847 /* TianQiYuBaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03471C11F4B200C12847 /* TianQiYuBaoTests.swift */; };
 		74EB03531C11F4B200C12847 /* TianQiYuBaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03521C11F4B200C12847 /* TianQiYuBaoUITests.swift */; };
-		74EB03611C11F88D00C12847 /* WeatherInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74EB03601C11F88D00C12847 /* WeatherInfo.plist */; };
+		74EB03631C11FA1200C12847 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74EB03621C11FA1200C12847 /* CurrentWeather.plist */; };
+		74EB03651C12266F00C12847 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03641C12266F00C12847 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,8 @@
 		74EB034E1C11F4B200C12847 /* TianQiYuBaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianQiYuBaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EB03521C11F4B200C12847 /* TianQiYuBaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianQiYuBaoUITests.swift; sourceTree = "<group>"; };
 		74EB03541C11F4B200C12847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74EB03601C11F88D00C12847 /* WeatherInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WeatherInfo.plist; path = ../WeatherInfo.plist; sourceTree = "<group>"; };
+		74EB03621C11FA1200C12847 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../../../../Downloads/CurrentWeather.plist; sourceTree = "<group>"; };
+		74EB03641C12266F00C12847 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,11 @@
 				74EB03321C11F4B200C12847 /* AppDelegate.swift */,
 				74EB03341C11F4B200C12847 /* ViewController.swift */,
 				74EB03361C11F4B200C12847 /* Main.storyboard */,
+				74EB03641C12266F00C12847 /* CurrentWeather.swift */,
+				74EB03621C11FA1200C12847 /* CurrentWeather.plist */,
 				74EB03391C11F4B200C12847 /* Assets.xcassets */,
 				74EB033B1C11F4B200C12847 /* LaunchScreen.storyboard */,
 				74EB033E1C11F4B200C12847 /* Info.plist */,
-				74EB03601C11F88D00C12847 /* WeatherInfo.plist */,
 			);
 			path = TianQiYuBao;
 			sourceTree = "<group>";
@@ -236,9 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EB033D1C11F4B200C12847 /* LaunchScreen.storyboard in Resources */,
+				74EB03631C11FA1200C12847 /* CurrentWeather.plist in Resources */,
 				74EB033A1C11F4B200C12847 /* Assets.xcassets in Resources */,
 				74EB03381C11F4B200C12847 /* Main.storyboard in Resources */,
-				74EB03611C11F88D00C12847 /* WeatherInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EB03351C11F4B200C12847 /* ViewController.swift in Sources */,
+				74EB03651C12266F00C12847 /* CurrentWeather.swift in Sources */,
 				74EB03331C11F4B200C12847 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
