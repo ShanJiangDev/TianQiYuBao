@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744263391C35C94B00024D76 /* ForcastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744263381C35C94B00024D76 /* ForcastService.swift */; };
+		7442633D1C3711E800024D76 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7442633C1C3711E800024D76 /* CurrentWeather.plist */; };
+		745E11521C3547A100196732 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E11511C3547A100196732 /* NetworkOperation.swift */; };
 		74EB03331C11F4B200C12847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03321C11F4B200C12847 /* AppDelegate.swift */; };
 		74EB03351C11F4B200C12847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03341C11F4B200C12847 /* ViewController.swift */; };
 		74EB03381C11F4B200C12847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EB03361C11F4B200C12847 /* Main.storyboard */; };
@@ -14,7 +17,6 @@
 		74EB033D1C11F4B200C12847 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74EB033B1C11F4B200C12847 /* LaunchScreen.storyboard */; };
 		74EB03481C11F4B200C12847 /* TianQiYuBaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03471C11F4B200C12847 /* TianQiYuBaoTests.swift */; };
 		74EB03531C11F4B200C12847 /* TianQiYuBaoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03521C11F4B200C12847 /* TianQiYuBaoUITests.swift */; };
-		74EB03631C11FA1200C12847 /* CurrentWeather.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74EB03621C11FA1200C12847 /* CurrentWeather.plist */; };
 		74EB03651C12266F00C12847 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB03641C12266F00C12847 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		744263381C35C94B00024D76 /* ForcastService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastService.swift; sourceTree = "<group>"; };
+		7442633C1C3711E800024D76 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../../../../Downloads/StormyS3V5/Stormy/CurrentWeather.plist; sourceTree = "<group>"; };
+		745E11511C3547A100196732 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		74EB032F1C11F4B200C12847 /* TianQiYuBao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianQiYuBao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EB03321C11F4B200C12847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74EB03341C11F4B200C12847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +54,6 @@
 		74EB034E1C11F4B200C12847 /* TianQiYuBaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianQiYuBaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EB03521C11F4B200C12847 /* TianQiYuBaoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianQiYuBaoUITests.swift; sourceTree = "<group>"; };
 		74EB03541C11F4B200C12847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74EB03621C11FA1200C12847 /* CurrentWeather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CurrentWeather.plist; path = ../../../../Downloads/CurrentWeather.plist; sourceTree = "<group>"; };
 		74EB03641C12266F00C12847 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,13 +105,15 @@
 		74EB03311C11F4B200C12847 /* TianQiYuBao */ = {
 			isa = PBXGroup;
 			children = (
+				74EB03361C11F4B200C12847 /* Main.storyboard */,
 				74EB03321C11F4B200C12847 /* AppDelegate.swift */,
 				74EB03341C11F4B200C12847 /* ViewController.swift */,
-				74EB03361C11F4B200C12847 /* Main.storyboard */,
 				74EB03641C12266F00C12847 /* CurrentWeather.swift */,
-				74EB03621C11FA1200C12847 /* CurrentWeather.plist */,
+				745E11511C3547A100196732 /* NetworkOperation.swift */,
+				744263381C35C94B00024D76 /* ForcastService.swift */,
 				74EB03391C11F4B200C12847 /* Assets.xcassets */,
 				74EB033B1C11F4B200C12847 /* LaunchScreen.storyboard */,
+				7442633C1C3711E800024D76 /* CurrentWeather.plist */,
 				74EB033E1C11F4B200C12847 /* Info.plist */,
 			);
 			path = TianQiYuBao;
@@ -239,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74EB033D1C11F4B200C12847 /* LaunchScreen.storyboard in Resources */,
-				74EB03631C11FA1200C12847 /* CurrentWeather.plist in Resources */,
+				7442633D1C3711E800024D76 /* CurrentWeather.plist in Resources */,
 				74EB033A1C11F4B200C12847 /* Assets.xcassets in Resources */,
 				74EB03381C11F4B200C12847 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744263391C35C94B00024D76 /* ForcastService.swift in Sources */,
+				745E11521C3547A100196732 /* NetworkOperation.swift in Sources */,
 				74EB03351C11F4B200C12847 /* ViewController.swift in Sources */,
 				74EB03651C12266F00C12847 /* CurrentWeather.swift in Sources */,
 				74EB03331C11F4B200C12847 /* AppDelegate.swift in Sources */,
@@ -495,6 +503,7 @@
 				74EB03591C11F4B200C12847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EB035A1C11F4B200C12847 /* Build configuration list for PBXNativeTarget "TianQiYuBaoTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +512,7 @@
 				74EB035C1C11F4B200C12847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74EB035D1C11F4B200C12847 /* Build configuration list for PBXNativeTarget "TianQiYuBaoUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +521,7 @@
 				74EB035F1C11F4B200C12847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
