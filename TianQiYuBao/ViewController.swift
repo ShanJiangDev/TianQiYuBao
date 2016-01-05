@@ -18,6 +18,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var currentPrecipitationLabel: UILabel?
 
+    @IBOutlet weak var currentWeatherIcon: UIImageView?
+    
+    @IBOutlet weak var currentWeatherSummary: UILabel?
+    
+    @IBOutlet weak var refreshButton: UIButton?
+
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
+    
     private let forecastAPIKey = "4d259a2a7a94a10a5cbe516e69fad08d"
 
     
@@ -121,13 +129,32 @@ class ViewController: UIViewController {
 //------------------- Version 2: Use function from seperate classes -------------------//
    
     
-    let coordinat: (lat: Double, lon: Double) = (37.8267,-122.423)
+    let coordinat: (lat: Double, lon: Double) = (57.42,11.58)
+    
     
     
     override func viewDidLoad() {
         
-        super.viewDidLoad()
         
+        //Change status bar color
+        
+        
+        //UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        //navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        
+        super.viewDidLoad()
+        retriveWeatherForecast()
+        
+       
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func retriveWeatherForecast(){
         let forecastService = ForecastService(APIKey: forecastAPIKey)
         forecastService.getForecast(coordinat.lat, lon: coordinat.lon){
             (let currently) in
@@ -143,7 +170,7 @@ class ViewController: UIViewController {
                 // Update UI
                 // Any of the UI related code have to be on the main thread
                 
-                // We need to make sure, even some of the value might be nil, we still need to display some other existed values. So we can not use the chained optional binding syntax"&&". 
+                // We need to make sure, even some of the value might be nil, we still need to display some other existed values. So we can not use the chained optional binding syntax"&&".
                 
                 //dispatch_get_main_queue(): speciffy the main queue, and put the code inside the closure.
                 
@@ -153,12 +180,30 @@ class ViewController: UIViewController {
                     
                     // All the variable are optional, so we need to check the existence first, then set the label.
                     // Single optional binding check
+                    
+                    
+                    //Size class: available space or display environemnt, can have one of two vailues: compact or regular
+                    //Regular class: assosiate with expensive displace space
+                    //Compact class: assosiate with constrain space
+                    //To caraterized a display environment, we need to specify two size classes: one vertically, one horizatally
+                    
                     print("inside main quesue")
-                    if let temperature = currentWeather.temperature{
+                    if let temperature: Float = currentWeather.temperature{
                         // When refer a stored property from inside a closure, you always have to use the keyword "self".
-                        print("current temperature is : \(temperature)")
-                        self.currentTLabel?.text = "\(temperature)˚"
+                        self.currentTLabel?.text = "\(Int(temperature))˚"
+                        print("Celsium Temperature current temperature is : \(temperature)")
                     }
+                    
+                    // Checking if we have an icon property set
+                    // True: assign it to the image property
+                    if let icon = currentWeather.icon{
+                        self.currentWeatherIcon?.image = icon
+                    }
+                    
+                    if let summary = currentWeather.summary{
+                        self.currentWeatherSummary?.text = summary
+                    }
+                    
                     
                     if let humidity = currentWeather.humidity{
                         // When refer a stored property from inside a closure, you always have to use the keyword "self".
@@ -170,26 +215,51 @@ class ViewController: UIViewController {
                         self.currentPrecipitationLabel?.text = "\(precipitation)%"
                     }
                     
+                    self.toggleRefreshAnimation(false)
                 }
-                
-                
             }
             
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func refreshWeather() {
+        toggleRefreshAnimation(true)
+        retriveWeatherForecast()
     }
 
     
+    func toggleRefreshAnimation(on:Bool){
+        refreshButton?.hidden = on
+        if on{
+            activityIndicator?.startAnimating()
+        }else{
+            activityIndicator?.stopAnimating()
+        }
+    }
+    
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+
+    
+
+
     
 
 }
 
 
-//Size class: available space or display environemnt, can have one of two vailues: compact or regular
-//Regular class: assosiate with expensive displace space 
-//Compact class: assosiate with constrain space
-//To caraterized a display environment, we need to specify two size classes: one vertically, one horizatally
+
+
+
+
+
+
+
+
+
+
+
+
+

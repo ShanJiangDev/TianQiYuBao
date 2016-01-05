@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "currentWeatherFromJSON(_:)"
+            landmarkName = "currentWeatherFromJSONDictionary(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
